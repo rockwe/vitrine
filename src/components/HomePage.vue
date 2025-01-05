@@ -1,102 +1,73 @@
 <template>
-<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="@/assets/product01D.webp" class="d-block w-100" alt="...">
+  <div class="container text-center mt-5">
+    <h1 class="display-4">Feel <span class="text-success">Healthy</span> and <span class="text-success">Energetic</span> With Our Vitamins</h1>
+    <p class="lead mt-3">
+      Our mission is to make you healthy and happy. For this, we use only natural and high-quality ingredients necessary to achieve an extraordinary effect.
+    </p>
+    <div class="d-flex justify-content-center mt-4">
+      <div class="badge bg-secondary me-2">Supplements</div>
+      <div class="badge bg-secondary me-2">Fast and Timely Delivery</div>
+      <div class="badge bg-secondary">Free Shipping from $30!</div>
     </div>
-    <div class="carousel-item">
-      <img src="@/assets/product02D.webp" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="@/assets/product03D.webp" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
-<div class="global">
-		<section class="top-articles">
-			<div class="div">
-				<h2 class="category-title">First steps</h2>
-				<ul class="list-articles">
-					<li class="article">
-						<li><router-link to="/premiersPas">What's Netflix ?</router-link></li>
-					</li>
-					<li class="article">
-						<a href="">How to pay for my Netflix subscription ?</a>
-					</li>
-				</ul>
-			</div>
-			<div class="div">
-				<h2 class="category-title">Cannot read</h2>
-				<ul class="list-articles">
-					<li class="article">
-						<a href="/mdp">I forgot my Netflix username or password</a>
-					</li>
-
-				</ul>
-			</div>
-			<div class=" div">
-				<h2 class="category-title">Quick links</h2>
-				<ul class="list-articles">
-					<li class="article">
-						<a href="#"> Reset password </a>
-					</li>
-				
-					<li class="article">
-						<a href="">Update Email </a>
-					</li>
-
-					<li class="article">
-						<a href="#">Request movies or TV shows </a>
-					</li>
-				</ul>
-			</div>
-
-
-			<div class=" div">
-				<h2 class="category-title">Watch Netflix</h2>
-				<ul class="list-articles">
-					<li class="article">
-						<a href="#"> idée1 </a>
-					</li>
-				
-					<li class="article">
-						<a href="">idée2 </a>
-					</li>
-
-					<li class="article">
-						<a href="#">idée3 </a>
-					</li>
-				</ul>
-			</div>
-		</section>
-	</div>
-<footer class="iq-footer">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-6">
-          <ul class="list-inline mb-0">
-            <slot name="left"></slot>
-          </ul>
-        </div>
-        <div class="col-lg-6 text-right">
-          <slot name="right"></slot>
+    <!-- Image principale -->
+    <img
+      src="https://via.placeholder.com/800x400" 
+      alt="Healthy Lifestyle"
+      class="img-fluid mt-5"
+    />
+    <h2 class="mt-5">Popular Categories</h2>
+    <!-- Liste des catégories avec images en ligne -->
+    <div class="row mt-4">
+      <div class="col-md-3" v-for="category in categories" :key="category.id">
+        <div class="card">
+          <img :src="category.image" class="card-img-top" :alt="category.title" />
+          <div class="card-body">
+            <h5 class="card-title">{{ category.title }}</h5>
+          </div>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
 </template>
 
 <script>
-
+export default {
+  name: "Accueil",
+  data() {
+    return {
+      categories: [
+        {
+          id: 1,
+          title: "Allergy Relief",
+          image: "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1",
+        },
+        {
+          id: 2,
+          title: "Anxiety",
+          image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
+        },
+        {
+          id: 3,
+          title: "Depression",
+          image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e",
+        },
+        {
+          id: 4,
+          title: "Eye & Vision",
+          image: "https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d",
+        },
+      ],
+    };
+  },
+};
 </script>
 
-<style>
+<style scoped>
+.text-success {
+  font-weight: bold;
+}
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
 </style>
