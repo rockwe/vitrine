@@ -1,5 +1,21 @@
 <template>
-<div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+<div class="container">
+	<div class="row bg-danger mb-5 p-3">
+		<div class="col"><p class=" p-1  border-dark text-center text-white"><font-awesome-icon :icon="['fas', 'house']" /> Telecharge l'app et <span> et beneficiez de reduction</span></p></div>
+		<div class=" col"><p class=" p-2 border-dark text-center text-white"> <FontAwesomeIcon :icon="faDragon" />Affiliation</p></div>
+		<div class=" col "><p class=" p-2  border-dark text-center text-white"> 15% de reduction <span> et beneficiez de reduction</span> </p></div>
+		<div class="col "><p class=" p-2  border-dark text-center text-white"> Carte cadeau</p></div>
+
+	</div>
+	<div class="row ">
+		<div class="col"><p class=" p-2  border-dark text-center "> Carte cadeau</p></div>
+		<div class="col">
+			<div id="carouselExampleIndicators" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="@/assets/product01D.webp" class="d-block w-100" alt="...">
@@ -11,92 +27,29 @@
       <img src="@/assets/product03D.webp" class="d-block w-100" alt="...">
     </div>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Previous</span>
   </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
 </div>
-<div class="global">
-		<section class="top-articles">
-			<div class="div">
-				<h2 class="category-title">First steps</h2>
-				<ul class="list-articles">
-					<li class="article">
-						<li><router-link to="/premiersPas">What's Netflix ?</router-link></li>
-					</li>
-					<li class="article">
-						<a href="">How to pay for my Netflix subscription ?</a>
-					</li>
-				</ul>
-			</div>
-			<div class="div">
-				<h2 class="category-title">Cannot read</h2>
-				<ul class="list-articles">
-					<li class="article">
-						<a href="/mdp">I forgot my Netflix username or password</a>
-					</li>
-
-				</ul>
-			</div>
-			<div class=" div">
-				<h2 class="category-title">Quick links</h2>
-				<ul class="list-articles">
-					<li class="article">
-						<a href="#"> Reset password </a>
-					</li>
-				
-					<li class="article">
-						<a href="">Update Email </a>
-					</li>
-
-					<li class="article">
-						<a href="#">Request movies or TV shows </a>
-					</li>
-				</ul>
-			</div>
-
-
-			<div class=" div">
-				<h2 class="category-title">Watch Netflix</h2>
-				<ul class="list-articles">
-					<li class="article">
-						<a href="#"> idée1 </a>
-					</li>
-				
-					<li class="article">
-						<a href="">idée2 </a>
-					</li>
-
-					<li class="article">
-						<a href="#">idée3 </a>
-					</li>
-				</ul>
-			</div>
-		</section>
+		</div>
+		<div class="col"><p class=" p-2  border-dark text-center "> Carte cadeau</p></div>
 	</div>
-<footer class="iq-footer">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-6">
-          <ul class="list-inline mb-0">
-            <slot name="left"></slot>
-          </ul>
-        </div>
-        <div class="col-lg-6 text-right">
-          <slot name="right"></slot>
-        </div>
-      </div>
-    </div>
-  </footer>
+</div>
 </template>
 
 <script>
 
 </script>
 
-<style>
+<style >
+
+span{
+	 font-family: Times, sans-serif;
+  font-size: 70%
+}
 </style>
